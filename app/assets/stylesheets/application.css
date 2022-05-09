@@ -63,3 +63,10 @@ div.actions{
 label{
   display: block;
 }
+
+#error_exprannation{
+  width: 450px;
+  padding: 7px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
