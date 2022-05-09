@@ -23,6 +23,10 @@ body{
   margin: 33px;
 }
 
+#notice{
+  color: green
+}
+
 
 p{
   margin: 33px;
