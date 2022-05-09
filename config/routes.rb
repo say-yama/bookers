@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+ root "homes#top"
   get "/" => "homes#top"
+  patch "books/:id" => "books#update", as:"update_book"
+  delete "books/:id" => "books#destroy", as:"destroy_book"
   # get 'books/index'
   # get 'books/show'
   # get 'books/edit'
@@ -8,13 +11,3 @@ Rails.application.routes.draw do
 
    resources :books
 end
-
-                              #     Prefix Verb   URI Pattern                                                                                       Controller#Action
-                              #     books GET    /books(.:format)                                                                                  books#index
-                              #           POST   /books(.:format)                                                                                  books#create
-                              #   new_book GET    /books/new(.:format)                                                                              books#new
-                              # edit_book GET    /books/:id/edit(.:format)                                                                         books#edit
-                              #       book GET    /books/:id(.:format)                                                                              books#show
-                              #           PATCH  /books/:id(.:format)                                                                              books#update
-                              #           PUT    /books/:id(.:format)                                                                              books#update
-                              #           DELETE /books/:id(.:format)                                                                              books#destroy

@@ -9,13 +9,13 @@
     </tr>
   </thead>
   <tboday>
-    <%= @books.each do |book| %>
+    <% @books.each do |book| %>
     <tr>
-      <td><%= books.title %></td>
-      <td><%= books.body %></td>
-      <td><%= link_to "show", book_path(list.id) %></td>
-      <td></td>
-      <td></td>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "Show", book_path(book.id) %></td>
+      <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+      <td><%= link_to "Destroy",destroy_book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></td>
     </tr>
     <% end %>
   </tboday>
@@ -25,10 +25,9 @@
 
 
 
-<form class = "new_book">
-  
+
  <h2>New book</h2>
-   <%= form_with model: @book do |f| %>
+<%= form_with model: @book, local:true do |f| %>
  
   <div class= "field">
    <label for = "book_title">本のタイトル</label>
@@ -41,8 +40,8 @@
   </div>
  
   <div class = "actions">
-   <%= f.submit "Create boooks"  %>
+   <%= f.submit "Create books"  %>
   </div>
-</form>
+
 <% end %>
   
