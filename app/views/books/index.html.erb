@@ -1,26 +1,25 @@
   <h1>Books</h1>
 
-<!--<table>-->
-<!--  <thead>-->
-<!--    <tr>-->
-<!--      <th>本のタイトル</th>-->
-<!--      <th>感想</th>-->
-<!--      <th colspan= "3"></th>-->
-<!--    </tr>-->
-<!--  </thead>-->
-<!--  <tboday>-->
-<!--    <%= @books.each do |book| %>-->
-<!--    <tr>-->
-<!--      <td><%= books.title %></td>-->
-<!--      <td><%= books.body %></td>-->
-<!--      <td><%= link_to "show", book_path(list.id) %></td>-->
-<!--      <td></td>-->
-<!--      <td></td>-->
-<!--    </tr>-->
-<!--    <% end %>-->
-<!--  </tboday>-->
-<!--</table>-->
-
+<table>
+  <thead>
+    <tr>
+      <th>本のタイトル</th>
+      <th>感想</th>
+      <th colspan= "3"></th>
+    </tr>
+  </thead>
+  <tboday>
+    <%= @books.each do |book| %>
+    <tr>
+      <td><%= books.title %></td>
+      <td><%= books.body %></td>
+      <td><%= link_to "show", book_path(list.id) %></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% end %>
+  </tboday>
+</table>
 
 
 
