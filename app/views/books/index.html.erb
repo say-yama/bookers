@@ -1,2 +1,49 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+  <h1>Books</h1>
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>本のタイトル</th>-->
+<!--      <th>感想</th>-->
+<!--      <th colspan= "3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tboday>-->
+<!--    <%= @books.each do |book| %>-->
+<!--    <tr>-->
+<!--      <td><%= books.title %></td>-->
+<!--      <td><%= books.body %></td>-->
+<!--      <td><%= link_to "show", book_path(list.id) %></td>-->
+<!--      <td></td>-->
+<!--      <td></td>-->
+<!--    </tr>-->
+<!--    <% end %>-->
+<!--  </tboday>-->
+<!--</table>-->
+
+
+
+
+
+
+<form class = "new_book">
+  
+ <h2>New book</h2>
+   <%= form_with model: @book do |f| %>
+ 
+  <div class= "field">
+   <label for = "book_title">本のタイトル</label>
+   <%= f.text_field :title %>
+  </div>
+  
+  <div class= "field">
+   <label for = "book_title">感想</label>
+   <%= f.text_area :body %>
+  </div>
+ 
+  <div class = "actions">
+   <%= f.submit "Create boooks"  %>
+  </div>
+</form>
+<% end %>
+  
